@@ -2,7 +2,7 @@ aniso8601==9.0.1
 click==7.1.2
 dnspython==2.1.0
 email-validator==1.1.2
-Flask==1.1.2
+Flask==2.1.0
 Flask-FontAwesome==0.1.5
 Flask-RESTful==0.3.8
 Flask-SQLAlchemy==2.5.1

@@ -36,7 +36,7 @@ function suma_tiempo(){
 $(document).ready(function(){
     set_estado_reloj("cero")
      
-    $("#lanzamientos").hide()
+    $(".op2").hide()
 
     
     
@@ -45,8 +45,10 @@ $(document).ready(function(){
     $( "#detiene" ).click(function() {$("#estado").html("detenido")});
 
     $("#btn_lanzamientos").click(function(){ $("#lanzamientos").slideDown();});
+    $("#btn_tapones").click(function(){ $("#tapones").slideDown();});
 
-    $("#btn_1_ok").click(function(){ $("#lanzamientos").slideUp();});
+    $(".btn_lanza").click(function(){ valor=$(this).attr("data"); $("#lanzamientos").slideUp();});
+    $(".btn_tapon").click(function(){ valor=$(this).attr("data"); $("#tapones").slideUp();});
  
     
  
