@@ -9,8 +9,7 @@ function suma_tiempo(){
         var timer = setInterval(function(){
              
             var estado = $("#estado").html()
-            console.log(estado);
-            console.log(segundos_actual);
+          
             
             if (segundos_actual==0){
                 minutos_actual--
