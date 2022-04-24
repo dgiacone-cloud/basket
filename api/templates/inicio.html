@@ -8,80 +8,116 @@
 
 <label  hidden id="estado">Detenido</label>
 
-<div class="container bg-light p-2  mt-5" style="width:380px; height:700px">
-    <div class="container ">
-        <div class="container">
+<div class="container  p-2  mt-5" id ="step1" style="width:380px; height:700px; background:#caf0f8">
+ 
+        <div class="container mt-4">
           <!-- Reloj de tiempo -->
-            <div class="row">
-              <div class="col-sm w-25">
-                <button style="font-family:verdana" type="button " id="adelante" class="  bg-success  m-1 btn btn-sucess">START </button>
+            <div class="container">
+              <div class="bg-light " id="timerJuego" style="font-size:30px; width:100%; text-align:center; border-radius: 4px;">
+                <span class="w-25 " id='minutos'>10</span><span>:</span><span class='w-25' id="segundos">00</span>
               </div>
-              <div class="col-sm w-25">
-                <p id="timerJuego" style="font-size:25px">00:00</p>
+              <div >
+                <button style="font-family:verdana; font-size:25px; width:46%" type="button " id="adelante" class="  bg-success  m-1 btn btn-sucess">START </button>
+                <button style="font-family:verdana;font-size:25px; width:46%" type="button" id="detiene" class=" m-1 bg-danger btn btn-danger "> STOP</button>
               </div>
-              <div class="col-sm w-25">
-                <button style="font-family:verdana" type="button" id="detiene" class=" m-1 bg-danger btn btn-danger "> STOP</button>
-              </div>
+ 
             </div>
             <!-- Botones de lcal y visitante -->
-            <div class="container p-2">
-              <button type="button" class="btn btn-primary" id="local" style="width:48%">Inicio Posecion</button>
-              <button type="button" class="btn btn-primary" style="width:48%">Fin Posesion</button>
-          </div>
+
+            <!-- <div class="container" >
+              <img src="{{url_for('static',filename='img/cancha.png')}}" id="cancha" alt="Girl in a jacket" style="margin-left:-100px; z-index:-2" width="500" height="600">
+            </div> -->
+           
           <!-- Botones de numero de camiseta -->
-          <div class="container " style="z-index:-1">
+          <div class="container mt-2" style=" z-index:10; height:200px">
             <div>
-              <button type="button" class="btn btn-primary p-2" style="width:23%; z-index:-1">04</button>
-              <button type="button" class="btn btn-primary p-2" style="width:23%; z-index:-1">05</button>
-              <button type="button" class="btn btn-primary p-2" style="width:23%; z-index:-1">06</button>
-              <button type="button" class="btn btn-primary p-2" style="width:23%; z-index:-1">07</button>
+              <button type="button" class="btn   p-6 btn_cami" style="width:23%; font-size:30px; z-index:-1">04</button>
+              <button type="button" class="btn   p-6 btn_cami" style="width:23%; font-size:30px; z-index:-1">05</button>
+              <button type="button" class="btn   p-6 btn_cami" style="width:23%; font-size:30px; z-index:-1">06</button>
+              <button type="button" class="btn   p-6 btn_cami" style="width:23%; font-size:30px; z-index:-1">07</button>
             </div>
             <div class="mt-1">
-              <button type="button" class="btn btn-primary p-2" style="width:23%; z-index:-1">08</button>
-              <button type="button" class="btn btn-primary p-2" style="width:23%; z-index:-1">09</button>
-              <button type="button" class="btn btn-primary p-2" style="width:23%; z-index:-1">10</button>
-              <button type="button" class="btn btn-primary p-2" style=width:23%; z-index:-1">11</button>
+              <button type="button" class="btn   p-6 btn_cami" style="width:23%; font-size:30px; z-index:-1">08</button>
+              <button type="button" class="btn   p-6 btn_cami" style="width:23%; font-size:30px; z-index:-1">09</button>
+              <button type="button" class="btn   p-6 btn_cami" style="width:23%; font-size:30px; z-index:-1">10</button>
+              <button type="button" class="btn   p-6 btn_cami" style="width:23%; font-size:30px; z-index:-1">11</button>
           </div>
           <div class="mt-1">
-            <button type="button" class="btn btn-primary p-2" style="width:23%; z-index:-1">12</button>
-            <button type="button" class="btn btn-primary p-2" style="width:23%; z-index:-1">13</button>
-            <button type="button" class="btn btn-primary p-2" style="width:23%; z-index:-1">14</button>
-            <button type="button" class="btn btn-primary p-2" style="width:23%; z-index:-1">15</button>
+            <button type="button" class="btn   p-6 btn_cami" style="width:23%; font-size:30px; z-index:-1">12</button>
+            <button type="button" class="btn   p-6 btn_cami" style="width:23%; font-size:30px; z-index:-1">13</button>
+            <button type="button" class="btn   p-6 btn_cami" style="width:23%; font-size:30px; z-index:-1">14</button>
+            <button type="button" class="btn   p-6 btn_cami" style="width:23%; font-size:30px; z-index:-1">15 </button>
         </div>
-    </div>    
-    <!-- Opciones de seleccion  #1 -->
-    <div class="container " >
-        <button type="button" class="btn btn-primary p-2 mt-1" id="btn_lanzamientos" style="width:97%">Lanzamientos</button>
-        <button type="button" class="btn btn-primary p-2 mt-1" id="btn_tapones"style="width:97%">Tapones</button>
-        <button type="button" class="btn btn-primary p-2 mt-1" id="btn_perdidas"style="width:97%">Perdidas</button>
-        <button type="button" class="btn btn-primary p-2 mt-1" id="btn_robos"style="width:97%">Robos</button>
-        <button type="button" class="btn btn-primary p-2 mt-1" id="btn_faltas"style="width:97%">Faltas </button>
-        <button type="button" class="btn btn-primary p-2 mt-1" id="btn_faltas"style="width:97%">Rebotes</button>
-        <button type="button" class="btn btn-primary p-2 mt-1" id="btn_faltas"style="width:97%">Acciones</button>
-        <button type="button" class="btn btn-warning p-4 mt-1 " id="btn_cancel" style="width:97%" data="">CANCELAR</button>
-  </div>
-
-  <div class="container  p-2 op2" id="lanzamientos"  style="margin-top:-300px; height:400px; z-index:10; position:relative; background:lightblue">
-    <button type="button" class="btn btn-primary p-2 mt-1 btn_lanza" id="btn_1_ok" style="width:48%" data="PUNTOS_1_OK">+1 OK</button>
-    <button type="button" class="btn btn-primary p-2 mt-1 btn_lanza" id="btn_1_fail" style="width:48%" data="PUNTOS_1_FAIL">+1 FAIL</button>
-    <button type="button" class="btn btn-primary p-2 mt-1 btn_lanza" id="btn_2_ok" style="width:48%" data="PUNTOS_2_OK">+2 OK</button>
-    <button type="button" class="btn btn-primary p-2 mt-1 btn_lanza" id="btn_2_fail" style="width:48%" data="PUNTOS_2_FAIL">+2 FAIL</button>
-    <button type="button" class="btn btn-primary p-2 mt-1 btn_lanza" id="btn_3_ok" style="width:48%" data="PUNTOS_3_OK">+3 OK</button>
-    <button type="button" class="btn btn-primary p-2 mt-1 btn_lanza" id="btn_3_fail" style="width:48%" data="PUNTOS_3_FAIL">+3 FAIL</button>
-    <button type="button" class="btn btn-danger p-4 mt-1 btn_lanza" id="btn_3_fail" style="width:100%" data="">CANCELAR</button>
-  </div>
-
-  <div class="container  p-2 op2" id="tapones"  style="margin-top:-300px; height:400px; z-index:10; position:relative; background:lightblue">
-    <button type="button" class="btn btn-primary p-2 mt-1 btn_tapon" id="btn_1_ok" style="width:100%" data="PUNTOS_1_OK">Recibido + Perdida</button>
-    <button type="button" class="btn btn-primary p-2 mt-1 btn_tapon" id="btn_1_ok" style="width:100%" data="PUNTOS_1_OK">Recibido + Rebote</button>
-    <button type="button" class="btn btn-primary p-2 mt-1 btn_tapon" id="btn_1_fail" style="width:100%" data="PUNTOS_1_FAIL">Realizado + recupero</button>
-    <button type="button" class="btn btn-primary p-2 mt-1 btn_tapon" id="btn_1_fail" style="width:100%" data="PUNTOS_1_FAIL">Realizado + rebote</button>
-    <button type="button" class="btn btn-danger p-4 mt-1 btn_tapon" id="btn_3_fail" style="width:100%" data="">CANCELAR</button>
-
-  </div>
+        
     <!-- Div de cierre-->
     </div>
+    <div class="container" id="acciones" style=" z-index:10; " >
+      <button type="button" class="btn   p-2 mt-1 btn_cami" id="btn_lanzamientos" style="width:31%; font-size:25px">LANZ </button>
+      <button type="button" class="btn   p-2 mt-1 btn_cami" id="btn_asistencias" style="width:31%; font-size:25px">ASIS</button>
+      <button type="button" class="btn p-2 mt-1 btn_cami" id="btn_perdidas" style="width:31%; font-size:25px">PERD </button>
+      <button type="button" class="btn   p-2 mt-1 btn_cami" id="btn_faltas" style="width:31%; font-size:25px">FALT </button>
+      <button type="button" class="btn   p-2 mt-1 btn_cami" id="btn_tapones" style="width:31%; font-size:25px">BLOQ </button>
+      <button type="button" class="btn   p-2 mt-1 btn_cami" id="btn_otros" style="width:31%; font-size:25px">OTRO </button>
+      
+      </div>
+      <div class="container p-2">
+        <button type="button" class="btn btn-success" id="local" style="width:48%; font-size:25px ">POSESION</button>
+        <button type="button" class="btn btn-danger" style="width:48%; font-size:25px">POSESION</button>
+    </div>
+
+    <div class="container  p-2 op2" id="lanzamientos"  style="box-shadow: 2px 2px 2px 2px #888888;margin-top:-300px; height:400px; z-index:10; position:relative; background:lightblue">
+      <div class="alert alert-primary" style="font-size:20px; text-align:center" role="alert">Seleccione una opcion!</div>
+      <button type="button" class="btn btn-primary p-2 mt-1 btn_lanza" id="btn_1_ok" style="width:48%" data="PUNTOS_1_OK">+1 OK</button>
+      <button type="button" class="btn btn-primary p-2 mt-1 btn_lanza" id="btn_1_fail" style="width:48%" data="PUNTOS_1_FAIL">+1 FAIL</button>
+      <button type="button" class="btn btn-primary p-2 mt-1 btn_lanza" id="btn_2_ok" style="width:48%" data="PUNTOS_2_OK">+2 OK</button>
+      <button type="button" class="btn btn-primary p-2 mt-1 btn_lanza" id="btn_2_fail" style="width:48%" data="PUNTOS_2_FAIL">+2 FAIL</button>
+      <button type="button" class="btn btn-primary p-2 mt-1 btn_lanza" id="btn_3_ok" style="width:48%" data="PUNTOS_3_OK">+3 OK</button>
+      <button type="button" class="btn btn-primary p-2 mt-1 btn_lanza" id="btn_3_fail" style="width:48%" data="PUNTOS_3_FAIL">+3 FAIL</button>
+      <button type="button" class="btn btn-danger p-4 mt-1 btn_lanza" id="btn_3_fail" style="width:100%" data="">CANCELAR</button>
+    </div>
+    
+    <div class="container  p-2 op2" id="tapones"  style="margin-top:-300px; height:400px; z-index:10; position:relative; background:lightblue">
+      <button type="button" class="btn btn-primary p-2 mt-1 btn_tapon" id="btn_1_ok" style="width:100%" data="PUNTOS_1_OK">Recibido + Perdida</button>
+      <button type="button" class="btn btn-primary p-2 mt-1 btn_tapon" id="btn_1_ok" style="width:100%" data="PUNTOS_1_OK">Recibido + Rebote</button>
+      <button type="button" class="btn btn-primary p-2 mt-1 btn_tapon" id="btn_1_fail" style="width:100%" data="PUNTOS_1_FAIL">Realizado + recupero</button>
+      <button type="button" class="btn btn-primary p-2 mt-1 btn_tapon" id="btn_1_fail" style="width:100%" data="PUNTOS_1_FAIL">Realizado + rebote</button>
+      <button type="button" class="btn btn-danger p-4 mt-1 btn_tapon" id="btn_3_fail" style="width:100%" data="">CANCELAR</button>
+    
+    </div>
+    <div class="container  p-2 op2" id="asistencias"  style="margin-top:-300px; height:400px; z-index:10; position:relative; background:lightblue">
+      <button type="button" class="btn btn-primary p-2 mt-1 btn_asistencia" id="btn_1_ok" style="width:100%" data="PUNTOS_1_OK">Pase Largo</button>
+      <button type="button" class="btn btn-primary p-2 mt-1 btn_asistencia" id="btn_1_ok" style="width:100%" data="PUNTOS_1_OK">PnR</button>
+      <button type="button" class="btn btn-primary p-2 mt-1 btn_asistencia" id="btn_1_fail" style="width:100%" data="PUNTOS_1_FAIL">Alley Opp</button>
+      <button type="button" class="btn btn-primary p-2 mt-1 btn_asistencia" id="btn_1_fail" style="width:100%" data="PUNTOS_1_FAIL">Poste</button>
+      <button type="button" class="btn btn-danger p-4 mt-1 btn_asistencia " id="btn_3_fail" style="width:100%" data="">CANCELAR</button>
+    </div>
+    <div class="container  p-2 op2" id="perdidas"  style="margin-top:-300px; height:400px; z-index:10; position:relative; background:lightblue">
+      <button type="button" class="btn btn-primary p-2 mt-1 btn_perdidas" id="btn_1_ok" style="width:100%" data="PUNTOS_1_OK">Mal pase</button>
+      <button type="button" class="btn btn-primary p-2 mt-1 btn_perdidas" id="btn_1_ok" style="width:100%" data="PUNTOS_1_OK">Dribling </button>
+      <button type="button" class="btn btn-primary p-2 mt-1 btn_perdidas" id="btn_1_fail" style="width:100%" data="PUNTOS_1_FAIL">Pasos</button>
+      <button type="button" class="btn btn-primary p-2 mt-1 btn_perdidas" id="btn_1_fail" style="width:100%" data="PUNTOS_1_FAIL">Violacion</button>
+      <button type="button" class="btn btn-danger p-4 mt-1 btn_perdidas " id="btn_3_fail" style="width:100%" data="">CANCELAR</button>
+    </div>
+
+    <div class="container  p-2 op2" id="faltas"  style="margin-top:-300px; height:400px; z-index:10; position:relative; background:lightblue">
+      <button type="button" class="btn btn-primary p-2 mt-1 btn_faltas" id="btn_1_ok" style="width:100%" data="PUNTOS_1_OK">Recibida 2+1</button>
+      <button type="button" class="btn btn-primary p-2 mt-1 btn_faltas" id="btn_1_ok" style="width:100%" data="PUNTOS_1_OK">Recibida 3+1</button>
+      <button type="button" class="btn btn-primary p-2 mt-1 btn_faltas" id="btn_1_ok" style="width:100%" data="PUNTOS_1_OK">Falta tecnica</button>
+      <button type="button" class="btn btn-primary p-2 mt-1 btn_faltas" id="btn_1_fail" style="width:100%" data="PUNTOS_1_FAIL">Faltaflagrante</button>
+      <button type="button" class="btn btn-primary p-2 mt-1 btn_faltas" id="btn_1_fail" style="width:100%" data="PUNTOS_1_FAIL">Falta personal 2+1</button>
+      <button type="button" class="btn btn-primary p-2 mt-1 btn_faltas" id="btn_1_fail" style="width:100%" data="PUNTOS_1_FAIL">Falta personal 3+1</button>
+      <button type="button" class="btn btn-danger p-4 mt-1 btn_faltas " id="btn_3_fail" style="width:100%" data="">CANCELAR</button>
+    </div>
   </div>
+
+  
+ 
+  
+
+<!-- Opciones de seleccion  #1 -->
+
+
+
 </div>
 
 
