@@ -52,7 +52,11 @@ $(document).ready(function(){
     
     
     $( "#adelante" ).click(function() {$("#estado").html("suma");suma_tiempo()});
-    $( "#atras" ).click(function() {$("#estado").html("resta")});
+    $( "#reset" ).click(function() {
+        $("#minutos").html("10")
+        $("#segundos").html("00")
+        
+    });
     $( "#detiene" ).click(function() {$("#estado").html("detenido");});
 
     $(".btn_cami").click(function(){ $("#acciones").slideDown();});

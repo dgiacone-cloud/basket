@@ -1,5 +1,8 @@
 <script type="text/javascript" src="{{url_for('static',filename='js/jquery-min.js')}}"></script>
 <script type="text/javascript" src="{{url_for('static',filename='js/globales.js')}}"></script>
+
+
+
 {% extends 'base/base.html' %}
 
 {% block title %} {{title}} {% endblock %}
@@ -17,8 +20,9 @@
                 <span class="w-25 " id='minutos'>10</span><span>:</span><span class='w-25' id="segundos">00</span>
               </div>
               <div >
-                <button style="font-family:verdana; font-size:25px; width:46%" type="button " id="adelante" class="  bg-success  m-1 btn btn-sucess">START </button>
-                <button style="font-family:verdana;font-size:25px; width:46%" type="button" id="detiene" class=" m-1 bg-danger btn btn-danger "> STOP</button>
+                <button style="font-family:verdana; font-size:20px; width:29%" type="button " id="adelante" class="  bg-success  m-1 btn btn-sucess">START </button>
+                <button style="font-family:verdana;font-size:20px; width:29%" type="button" id="detiene" class=" m-1 bg-danger btn btn-danger "> STOP</button>
+                <button style="font-family:verdana;font-size:20px; width:29%" type="button" id="reset" class=" m-1 bg-warning btn btn-info "> RESET</button>
               </div>
  
             </div>
