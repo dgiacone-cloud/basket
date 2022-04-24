@@ -1,0 +1,80 @@
+<script type="text/javascript" src="{{url_for('static',filename='js/jquery-min.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static',filename='js/globales.js')}}"></script>
+{% extends 'base/base.html' %}
+
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+
+<label  hidden id="estado">Detenido</label>
+
+<div class="container bg-light p-2  mt-5" style="width:380px; height:700px">
+    <div class="container ">
+        <div class="container">
+          <!-- Reloj de tiempo -->
+            <div class="row">
+              <div class="col-sm w-25">
+                <button style="font-family:verdana" type="button " id="adelante" class="  bg-success  m-1 btn btn-sucess">START </button>
+              </div>
+              <div class="col-sm w-25">
+                <p id="timerJuego" style="font-size:25px">00:00</p>
+              </div>
+              <div class="col-sm w-25">
+                <button style="font-family:verdana" type="button" id="detiene" class=" m-1 bg-danger btn btn-danger "> STOP</button>
+              </div>
+            </div>
+            <!-- Botones de lcal y visitante -->
+            <div class="container p-2">
+              <button type="button" class="btn btn-primary" id="local" style="width:48%">LOCAL</button>
+              <button type="button" class="btn btn-primary" style="width:48%">VISITANTE</button>
+          </div>
+          <!-- Botones de numero de camiseta -->
+          <div class="container " style="z-index:-1">
+            <div>
+              <button type="button" class="btn btn-primary p-2" style="width:23%; z-index:-1">04</button>
+              <button type="button" class="btn btn-primary p-2" style="width:23%; z-index:-1">05</button>
+              <button type="button" class="btn btn-primary p-2" style="width:23%; z-index:-1">06</button>
+              <button type="button" class="btn btn-primary p-2" style="width:23%; z-index:-1">07</button>
+            </div>
+            <div class="mt-1">
+              <button type="button" class="btn btn-primary p-2" style="width:23%; z-index:-1">08</button>
+              <button type="button" class="btn btn-primary p-2" style="width:23%; z-index:-1">09</button>
+              <button type="button" class="btn btn-primary p-2" style="width:23%; z-index:-1">10</button>
+              <button type="button" class="btn btn-primary p-2" style=width:23%; z-index:-1">11</button>
+          </div>
+          <div class="mt-1">
+            <button type="button" class="btn btn-primary p-2" style="width:23%; z-index:-1">12</button>
+            <button type="button" class="btn btn-primary p-2" style="width:23%; z-index:-1">13</button>
+            <button type="button" class="btn btn-primary p-2" style="width:23%; z-index:-1">14</button>
+            <button type="button" class="btn btn-primary p-2" style="width:23%; z-index:-1">15</button>
+        </div>
+    </div>    
+    <!-- Opciones de seleccion  #1 -->
+    <div class="container " >
+        <button type="button" class="btn btn-primary p-2 mt-1" id="btn_lanzamientos" style="width:97%">Lanzamientos</button>
+        <button type="button" class="btn btn-primary p-2 mt-1" id="btn_tapones"style="width:97%">Tapones</button>
+        <button type="button" class="btn btn-primary p-2 mt-1" id="btn_perdidas"style="width:97%">Perdidas</button>
+        <button type="button" class="btn btn-primary p-2 mt-1" id="btn_robos"style="width:97%">Robos</button>
+        <button type="button" class="btn btn-primary p-2 mt-1" id="btn_faltas"style="width:97%">Faltas </button>
+  </div>
+
+  <div class="container  p-2" id="lanzamientos"  style="margin-top:-300px; height:400px; z-index:10; position:relative; background:lightblue">
+    <button type="button" class="btn btn-primary p-2 mt-1" id="btn_1_ok" style="width:48%">+1 OK</button>
+    <button type="button" class="btn btn-primary p-2 mt-1" id="btn_1_fail" style="width:48%">+1 FAIL</button>
+    <button type="button" class="btn btn-primary p-2 mt-1" id="btn_2_ok" style="width:48%">+2 OK</button>
+    <button type="button" class="btn btn-primary p-2 mt-1" id="btn_2_fail" style="width:48%">+2 FAIL</button>
+    <button type="button" class="btn btn-primary p-2 mt-1" id="btn_3_ok" style="width:48%">+3 OK</button>
+    <button type="button" class="btn btn-primary p-2 mt-1" id="btn_3_fail" style="width:48%">+3 FAIL</button>
+  </div>
+    <!-- Div de cierre-->
+    </div>
+  </div>
+</div>
+
+
+
+
+
+ 
+{% endblock %}
+
